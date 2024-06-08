@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+
+<script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+
+<script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>  
+
+
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel">
+
+   
+
+
+
+
+
+    let rootElement = document.getElementById("root");
+    function buttonclick(){
+        alert("Hello")
+    }
+    function Message(properties){
+        
+        return <h1 >{properties.text}</h1>
+    }
+    function Button(properties){
+        return <div><p>Click the below button to alert 'Hello</p> <button onClick= {buttonclick}>{properties.text}</button></div>
+    }
+
+    let element = (
+        <>
+            <Message text = "React is a javascript library"  />
+            <Button text = "Click" element= ""/>
+            
+        </>
+    )
+    ReactDOM.createRoot(rootElement).render(element);
+
+
+</script>
+</html>
